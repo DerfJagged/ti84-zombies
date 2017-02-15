@@ -1,6 +1,4 @@
 # ti84-zombies
-A Nazi Zombies game for Ti84 calculators
-
 [Nazi Zombies Build 1.0 Readme]
 
 Thanks for downloading my game! I hope you enjoy it.
