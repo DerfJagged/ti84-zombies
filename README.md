@@ -3,7 +3,8 @@
 
 Thanks for downloading my game! I hope you enjoy it.
 In this build, ammo is unlimited although you can you can spend points to buy it from the mystery box.
-This is so I can test the game quicker. Source will be released after completion of the following.
+This is so I can test the game quicker. Source can be built with TokenIDE, then compiled on-calculator
+using AXE. Must be run by choosing "asm(" from the catalog then choosing the Zombies program.
 
 
 Known issues to be fixed in next version:
