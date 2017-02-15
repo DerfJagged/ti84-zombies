@@ -1,0 +1,478 @@
+.ZOMBIES
+Full
+Fix 5
+Lbl TOP
+ClrDraw
+DispGraph
+Text(20,42,"BY DERF JAGGED"
+Text(24,52,"(PRESS ENTER)"
+Text(69,22,"OMBIES")
+Text(27,22,"AZI"
+DeltaList(4,32,92,32,9,35,87,35,14,38,82,38,4,7,10,7,4,7,4,28,4,28,10,28,10,28,10,16,10,7,19,19,19,19,19,7,19,7,25,7,25,7,25,28,25,28,19,28,19,28,10,16,49,7,67,7,49,7,49,12,49,12,60,12,60,12,49,23,67,7,67,12,67,12,56,23,49,23,49,28,49,28,67,28,67,28,67,23,67,23,56,23)-2→A
+For(23)
+Line({A+2→A}ʳ,/256,{A+2→A}ʳ,/256
+End
+
+DispGraph
+0→A
+100→Q
+Lbl MENU
+getKey→K
+If K=9:0→K:ClrDraw:DispGraph:Goto DIFF:End
+If A=4
+999→Q:0→A
+Text(24,52,"CHEAT ENABLED!"
+DispGraph
+End
+If K≠34 and (K≠18) and (K≠36) and (K≠0)
+0→A:End
+
+If K=34 or (K=18) or (K=36)
+If A=1
+Goto CH1:End
+If A=2
+Goto CH2:End
+If A=3
+Goto CH3:End
+If K=34
+1→A:Else:0→A
+End
+0→K
+Goto MENU
+Lbl CH1
+If K=18
+2→A:Else:0→A
+End
+0→K
+Goto MENU
+Lbl CH2
+If K=18
+3→A:Else:0→A
+End
+0→K
+Goto MENU
+Lbl CH3
+If K=36
+4→A:Else:0→A
+End
+0→K
+Goto MENU
+End
+Goto MENU
+
+Lbl DIFF
+6→O
+
+Lbl DIFF4
+O-2→O
+Lbl DIFF3
+O-2→O
+Lbl DIFF2
+O-2→O
+Lbl DIFF1
+0→B→C→S→T→R→U→D→I→θ→G
+
+10000→S
+
+For(M,1,600)
+0→{L₁+M}
+End
+1→P→L
+30→X
+39→Y
+
+Text(65,49,"SCORE:")
+Text(5,35,"?")
+Text(7,55,"-")
+DeltaList(1,9,25,9,25,1,25,9,3,4,4,4,4,3,6,3,6,3,6,4,6,4,7,4,7,4,7,6,6,6,6,7,6,7,4,7,4,6,3,6,3,6,3,5,94,1,94,62,94,48,1,48,1,62,1,1,1,1,94,1,1,62,94,62,16,48,16,62,31,48,31,62,46,48,46,62,61,48,61,62,1,29,25,29,35,29,55,29,55,29,55,36,55,43,55,48,3,42,9,42,3,42,3,34,3,34,9,34,9,34,9,42,19,56,19,52,20,54,20,50,20,50,28,50,28,51,24,51,21,52,22,51,37,54,38,53,40,53,41,54,34,52,44,52,44,52,44,51,41,51,34,51,34,53,35,53,38,50,39,50,48,52,59,52,48,53,50,53,50,51,53,51,52,53,52,55,53,53,53,55,54,53,54,53,57,51,58,50,57,52,58,54,4,55,4,52,5,55,5,52,4,52,11,52,4,51,12,51,6,53,6,53)-2→A
+For(53)
+Line({A+2→A}ʳ,/256,{A+2→A}ʳ,/256
+End
+0→A
+
+DispGraph
+Lbl START
+getKey→K
+
+If K=15
+Goto DIE:End
+If K=3 or (K=4) or (K=2) or (K=1)
+Pxl-Off(X,Y)
+Pxl-Off(X-1,Y-1)
+Pxl-Off(X-1,Y)
+Pxl-Off(X,Y-1)
+K→J
+End
+If K=3 and (pxl-Test(X+1,Y)≠1) and (pxl-Test(X+1,Y-1)≠1)
+X+1→X:End
+If K=2 and (pxl-Test(X-2,Y)≠1) and (pxl-Test(X-2,Y-1)≠1)
+X-1→X:End
+If K=1 and (pxl-Test(X,Y+1)≠1) and (pxl-Test(X-1,Y+1)≠1)
+Y+1→Y:End
+If K=4 and (pxl-Test(X,Y-2)≠1) and (pxl-Test(X-1,Y-2)≠1)
+Y-1→Y:End
+Pxl-On(X,Y)
+Pxl-On(X-1,Y-1)
+Pxl-On(X,Y-1)
+Pxl-On(X-1,Y)
+If (X<55) and (Y>29):1→D:Else:0→D
+End
+If Z=0 and (R=2)
+0→R:P+1→P:End
+If K=47 and (R=0):1→R:End
+
+If R=0
+Text(3,10,"PRESS MATH TO START ROUND")
+End
+If R=1
+Text(27,2,"ROUND")
+Text(2,10,"                                                                                        "
+Text(48,2,P►Dec)
+P→U→Z
+For(θ,1,Z)
+0→r₁→r₂
+Repeat (r₁>65) and (r₁<92)
+rand^64+50→r₁
+End
+If r₁>85
+Repeat (r₂<45) and (r₂>3)
+rand^64→r₂
+End
+Else:3→r₂
+End
+r₁→{θ*5+L₁→M}
+r₂→{M+1}
+100→{M+2}
+Pxl-On({M},{M+1}
+Pxl-On({M},{M+1}-1
+Pxl-On({M}-1,{M+1}
+Pxl-On({M}-1,{M+1}-1
+2→R
+End:End
+
+If R=2
+For(θ,1,U)
+If {L₁+(θ*5)+2}>0
+If (({L₁+(θ*5)→M}=29)*({M+1}=29))+(({M+1}=40)*({M}=55))
+If {M+3}=0:1→{M+3}:Else:0→{M+3}:End
+Else
+If ({M}<55)*({M+1}>29):1→{M+3}:Else:0→{M+3}
+End:End
+Pxl-Off({M},{M+1}
+Pxl-Off({M},{M+1}-1
+Pxl-Off({M}-1,{M+1}
+Pxl-Off({M}-1,{M+1}-1
+If {M+3}=D
+Y→r₁:X→r₂
+Else
+If (abs(X-29)+abs({M}-29))<(abs(X-55)+abs({M}-55))
+29→r₁:29→r₂:Else:40→r₁:55→r₂:End
+End
+If r₁>{M+1} and (pxl-Test({M},{M+1}+1)≠1) and (pxl-Test({M}-1,{M+1}+1)≠1):{M+1}+1→{M+1}:End
+If r₁<{M+1} and (pxl-Test({M},{M+1}-2)≠1) and (pxl-Test({M}-1,{M+1}-2)≠1):{M+1}-1→{M+1}:End
+If r₂>{M} and (pxl-Test({M}+1,{M+1})≠1) and (pxl-Test({M}+1,{M+1}-1)≠1):{M}+1→{M}:End
+If r₂<{M} and (pxl-Test({M}-2,{M+1})≠1) and (pxl-Test({M}-2,{M+1}-1)≠1):{M}-1→{M}:End
+If ({M+1}=28) and ({M}≥55) and (X≥{M}):{M}+2→{M}:End
+Pxl-On({M},{M+1}
+Pxl-On({M},{M+1}-1
+Pxl-On({M}-1,{M+1}
+Pxl-On({M}-1,{M+1}-1
+If {M}=(X+1) or ({M}=(X-2)) or ({M}=X) or ({M}=(X-1)) or ({M}=(X+2))
+If ({M+1}=Y) or ({M+1}=(Y+1)) or ({M+1}=(Y+2)) or ({M+1}=(Y-1)) or ({M+1}=(Y-2))
+Q-1→Q
+End:End
+
+If Q≤0
+Goto DIE:End
+End:End:End
+Text(10,2,Q►Dec)
+If Q<100
+Text(18,2,"   "
+If Q<10
+Text(13,2,"       "
+End:End
+
+If K=33:1→L:End:If K=34:2→L:End:If K=26:3→L:End:If K=18:4→L:End:T+1→T
+
+If K=54
+6→T
+If (X<12) and (Y>32) and (Y<45) and (S>99)
+S-100→S
+rand^10→M
+If M<5:A+10→A
+Else
+If M>8:C+10→C
+Else
+B+10→B
+End:End:End
+
+L→r₁
+Lbl SHT
+I+1→I
+0→G
+Repeat ({L₁+300+(G*7)}=0)
+G+1→G
+End
+X→{L₁+300+(G*7)→M}
+Y→{M+1}
+J→{M+2}
+L→{M+3}
+If L=3
+X→r₃:Y→r₄
+End
+
+If L=4
+If J=1
+{M+1}+2→{M+1}
+Else
+If J=2
+{M}-1→{M}
+Else
+If J=3
+{M}+3→{M}
+Else
+If J=4
+{M+1}-2→{M+1}
+End:End:End
+End:End
+
+If J=4
+{M+1}-1→{M+1}
+End
+If J=2
+{M}-1→{M}
+End
+If L=5:1→L:Goto SHT:End
+If L=2:5→L:Goto SHT:End
+r₁→L
+End
+
+For(G,1,I)
+Pxl-Off({L₁+300+(G*7)→N},{N+1})
+If {N+3}=4
+Pxl-Off({N}-2,{N+1})
+Pxl-Off({N}-1,{N+1}-1)
+Pxl-Off({N}-1,{N+1}+1)
+End
+{N+2}→r₁
+If ({N+3}≠3)
+If r₁=1:{N+1}+1→{N+1}
+Else
+If r₁=2:{N}-1→{N}
+Else
+If r₁=3:{N}+1→{N}
+Else
+If r₁=4:{N+1}-1→{N+1}
+End:End
+End:End
+If T=6
+If {N+3}=2
+If r₁=1
+{N}-1→{N}
+Else
+If r₁=2
+{N+1}-1→{N+1}
+Else
+If r₁=3
+{N+1}+1→{N+1}
+Else
+If r₁=4
+{N}+1→{N}
+End:End:End
+End:End
+If {N+3}=5
+If r₁=1
+{N}+1→{N}
+Else
+If r₁=2
+{N+1}+1→{N+1}
+Else
+If r₁=3
+{N+1}-1→{N+1}
+Else
+If r₁=4
+{N}-1→{N}
+End:End:End
+End:End:End
+End
+If {N+3}=3
+7→{N+3}
+If r₁=1
+Repeat pxl-Test({N},{N+1})
+{N+1}+1→{N+1}
+End
+{N+1}-1→{N+1}
+Else
+If r₁=2
+Repeat pxl-Test({N},{N+1})
+{N}-1→{N}
+End
+{N}+1→{N}
+Else
+If r₁=3
+Repeat pxl-Test({N},{N+1})
+{N}+1→{N}
+End
+{N}-1→{N}
+Else
+If r₁=4
+Repeat pxl-Test({N},{N+1})
+{N+1}-1→{N+1}
+End
+{N+1}+1→{N+1}
+End:End
+End:End
+Line(X,Y,{N},{N+1})
+End
+
+If {N+3}=4
+If pxl-Test({N},{N+1}
+{N}→V:{N+1}→W
+Goto PRO
+Else
+If pxl-Test({N}-2,{N+1}
+{N}-2→V:{N+1}→W
+Goto PRO
+Else
+If pxl-Test({N}-1,{N+1}+1
+{N}-1→V:{N+1}+1→W
+Goto PRO
+Else
+If pxl-Test({N}-1,{N+1}-1
+{N}-1→V:{N+1}-1→W
+Goto PRO
+End:End:End:End
+Goto SKP
+Else
+If pxl-Test({L₁+300+(G*7)→N},{N+1})
+{N}→V
+{N+1}→W
+
+
+Lbl PRO
+For(θ,1,U)
+If {L₁+(θ*5)+2}>0
+If V=({L₁+(θ*5)→M}) or (V=({M}-1))
+If W=({M+1}) or (W=({M+1}-1))
+{M+2}-100→{M+2}
+S+10→S
+Z-1→Z
+Pxl-Off({M},{M+1})
+Pxl-Off({M}-1,{M+1})
+Pxl-Off({M},{M+1}-1)
+Pxl-Off({M}-1,{M+1}-1)
+1→r₅
+
+
+If {N+3}=4
+
+0→H
+Repeat ({L₁+(H*5)+2}>0) or (H=50)
+H+1→H
+End
+
+
+{N}→{N+4}
+{N+1}→{N+5}
+If H≠50
+{L₁+(H*5)}→{N}
+{L₁+(H*5)+1}→{N+1}
+Else
+51→H
+End
+Line({N+4},{N+5},{N},{N+1}
+DispGraph
+Pause 200
+DrawInv 
+Line({N+4},{N+5},{N},{N+1}
+DrawInv 
+0→θ
+{N}→V
+{N+1}→W
+{N}→{N+4}
+{N+1}→{N+5}
+End
+
+
+End:End
+End:End
+If {N+3}=7
+6→{N+3}
+Goto SKP
+Else
+If {N+3}=6
+DrawInv 
+Line(r₃,r₄,{N},{N+1}
+DrawInv 
+If r₅=0
+Pxl-On({N},{N+1})
+Else
+0→r₅
+End:End
+{L₁+300+(I*7)→N}→{L₁+300+(G*7)→M}
+{N+1}→{M+1}
+{N+2}→{M+2}
+{N+3}→{M+3}
+0→{N}
+0→{N+1}
+0→{N+2}
+0→{N+3}
+I-1→I
+G-1→G
+End
+Else
+Lbl SKP
+Pxl-On({L₁+300+(G*7)→N},{N+1})
+If {N+3}=4
+Pxl-On({N}-2,{N+1})
+Pxl-On({N}-1,{N+1}-1)
+Pxl-On({N}-1,{N+1}+1)
+End:End:End:End
+
+If T=6:0→T:End
+
+Text(18,55,A►Dec)
+Text(33,55,B►Dec)
+Text(48,55,C►Dec)
+Text(65,55,"                      ")
+Text(65,55,S►Dec)
+DispGraph
+Goto START
+
+Lbl DIE
+ClrDraw:DispGraph
+Text(30,10,"GAME OVER")
+Text(25,20,"YOU SURVIVED")
+P-1→P
+Text(45,27,P►Dec)
+If P=1
+Text(37,34,"ROUND")
+Else
+Text(37,34,"ROUNDS")
+End
+Text(10,50,"PLAY AGAIN")
+Text(65,50,"EXIT")
+Line(10,57,45,57)
+DispGraph
+1→A
+Lbl END
+getKey→K
+If K=3
+Text(1,57,"                                                                                               ")
+Line(65,57,79,57)
+DispGraph
+2→A
+End
+If K=2
+Text(1,57,"                                                                                               ")
+Line(10,57,45,57
+DispGraph
+1→A
+End
+
+If K=9 and (A=1)
+Goto TOP:End
+If K=9 and (A=2)
+ClrHome:Fix 4:Returnʳ
+End
+Goto END
