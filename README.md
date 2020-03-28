@@ -9,16 +9,16 @@ using AXE. Must be run by choosing "asm(" from the catalog then choosing the Zom
 
 Known issues to be fixed in next version:
 ----------------------------------------
--Wall pixels get deleted when shooting wunderwaffe and sniper against a wall
--Ammo text overwrites borders when >99
+- Wall pixels get deleted when shooting wunderwaffe and sniper against a wall
+- Ammo text overwrites borders when >99
 
 To-do list:
 ----------
--Add 4 difficulties which affect zombie speed and health
--Slowly spawn zombies rather than all at once, also spawn them from left side
--Draw map via hex code
--Drop a text hint at level 25 as to what the cheat code for the game is!
--Optimize code (could be optimized a LOT)
+- Add 4 difficulties which affect zombie speed and health
+- Slowly spawn zombies rather than all at once, also spawn them from left side
+- Draw map via hex code
+- Drop a text hint at level 25 as to what the cheat code for the game is!
+- Optimize code (could be optimized a LOT)
 
 Rough Yearly Changelog:
 ---------------
