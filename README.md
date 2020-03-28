@@ -22,9 +22,9 @@ To-do list:
 
 Rough Yearly Changelog:
 ---------------
-2009 - Built game, menus, and graphics in BASIC
-2010 - Rebuilt entire game in AXE
-2011 - Added other 3 weapons, mystery box, points system, zombie pathfinding
-2017 - Picked game up again, squashed a few pathfinding bugs
+- 2009 - Built game, menus, and graphics in BASIC
+- 2010 - Rebuilt entire game in AXE
+- 2011 - Added other 3 weapons, mystery box, points system, zombie pathfinding
+- 2017 - Picked game up again, squashed a few pathfinding bugs
 
 You can reach me at reddit.com/r/Derf_Jagged or derfjagged@outlook.com to give feedback.
