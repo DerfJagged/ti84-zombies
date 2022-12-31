@@ -6,6 +6,7 @@ In this build, ammo is unlimited although you can you can spend points to buy it
 This is so I can test the game quicker. Source can be built with TokenIDE, then compiled on-calculator
 using AXE. Must be run by choosing "asm(" from the catalog then choosing the Zombies program.
 
+![](https://i.imgur.com/dMzWjRX.gif)
 
 Known issues to be fixed in next version:
 ----------------------------------------
